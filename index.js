@@ -39,8 +39,8 @@ const mailOptions = {
 };
 
 // Schedule the cron job to run every day at 7 pm
-cron.schedule('*/2 * * * *', () => {
-  console.log('Cron job scheduled to send a good email every day at 7 pm.');
+cron.schedule('0 7 * * *', () => {
+  console.log('Cron job scheduled to send a good email every day at 7 am.');
   // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
